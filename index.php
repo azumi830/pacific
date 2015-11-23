@@ -5,7 +5,7 @@
 <title>パシフィックモール開発株式会社 | 世界の地域と人とを結ぶ、パシフィックモール開発株式会社</title>
 <link rel="apple-touch-icon" href="./images/touch-icon.png" />
 <link rel="shortcut icon" href="./images/favicon.ico" />
-<link rel="stylesheet" type="text/css" media="all" href="./style.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>" />
 <!--[if lt IE 9]>
   <meta http-equiv="Imagetoolbar" content="no" />
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
