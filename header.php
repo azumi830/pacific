@@ -15,7 +15,7 @@
 <body class="home">
 <div id="wrap">
   <section id="description">
-    <h1><?php bloginfo('description') ?></h1>
+    <h1><?php bloginfo('description'); ?></h1>
   </section><!-- #description end -->
   <div id="container">
     <header id="header">
@@ -59,6 +59,6 @@
       </ul><!-- #menu-global end -->
     </nav><!-- #global-nav end -->
     <section id="branding">
-      <img src="<?php bloginfo('template_url'); ?>/images/header/default.png" width="950" height="295" alt="" />
+      <img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" />
     </section><!-- #branding end -->
     <section id="contents-body">
