@@ -23,13 +23,15 @@
         <a href="<?php echo home_url('/'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/header/site_id.png" alt="<?php bloginfo('name') ?>" /></a>
       </h1><!-- #site-id end -->
       <div id="utility-group">
-        <nav id="utility-nav">
-          <ul>
-            <li><a href="#">トップページ</a></li>
-            <li><a href="#">個人情報保護方針</a></li>
-            <li><a href="#">サイトマップ</a></li>
-          </ul>
-        </nav><!-- #utility-nav end -->
+          <?php
+            wp_nav_menu(
+                array(
+                    'container' => 'nav',
+                    'container_id' => 'utility-nav',
+                    'theme_location' => 'place_utility',
+                )
+            );
+          ?>
         <div id="header-widget-area">
           <aside class="widget_search">
             <form role="search" id="searchform">
