@@ -44,25 +44,18 @@
         </div><!-- #header-widget-area end -->
       </div><!-- #utility-group end -->
     </header><!-- #header end -->
-    <nav id="global-nav">
-      <ul id="menu-global">
-        <li id="menu-item-home" class="menu-item current-menu-item"><a href="#">トップページ</a></li>
-        <li id="menu-item-about" class="menu-item"><a href="#">会社概要</a></li>
-        <li id="menu-item-mall" class="menu-item"><a href="#">モール開発実績</a>
-          <ul class="sub-menu">
-            <li class="menu-item"><a href="#">汐留モール</a></li>
-            <li class="menu-item"><a href="#">ドリアンモール</a></li>
-            <li class="menu-item"><a href="#">チャオプラヤモール</a></li>
-            <li class="menu-item"><a href="#">タムリンモール</a></li>
-          </ul>
-        </li>
-        <li id="menu-item-column" class="menu-item"><a href="#">コラム</a></li>
-        <li id="menu-item-inquiry" class="menu-item"><a href="#">お問い合わせ</a></li>
-      </ul><!-- #menu-global end -->
-    </nav><!-- #global-nav end -->
-<?php
-    if(is_front_page()):
-?>
+    <?php
+      wp_nav_menu(
+          array(
+              'container' => 'nav',
+              'container_id' => 'global-nav',
+              'theme_location' => 'place_global',
+          )
+      );
+    ?>
+    <?php
+        if(is_front_page()):
+    ?>
     <section id="branding">
       <img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" />
     </section><!-- #branding end -->
